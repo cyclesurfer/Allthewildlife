@@ -47,11 +47,20 @@
       "status": "pending",
       "emoji": "📷",
       "time": 1780424379974
+    },
+    {
+      "id": "17804251942259308",
+      "player": "Ron",
+      "species": "Blacktip Reef Shark",
+      "pts": 25,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780425194225
     }
   ],
   "customSp": [],
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1780769940000,
-  "lastUpdated": 1780425093489
+  "lastUpdated": 1780425194927
 }
