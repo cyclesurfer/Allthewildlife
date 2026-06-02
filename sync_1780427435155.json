@@ -1,0 +1,38 @@
+{
+  "gameId": 1780427435155,
+  "gameName": "Final Test",
+  "teams": [
+    {
+      "name": "Team 1",
+      "color": "#e85d3a"
+    },
+    {
+      "name": "Team 2",
+      "color": "#1a6b8a"
+    }
+  ],
+  "players": [
+    {
+      "name": "Qian",
+      "ti": 0
+    },
+    {
+      "name": "Mark",
+      "ti": 1
+    }
+  ],
+  "approver": "Mark",
+  "activeCats": [
+    "sea",
+    "fish",
+    "birds",
+    "reptiles",
+    "insects"
+  ],
+  "finds": [],
+  "customSp": [],
+  "ptOverrides": {},
+  "hiddenSp": [],
+  "endTime": 1781896200000,
+  "lastUpdated": 1780427435288
+}
