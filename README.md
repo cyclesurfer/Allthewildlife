@@ -1,2 +1,2 @@
 # Allthewildlife
-Al The Wildlife Game
+All The Wildlife Game
