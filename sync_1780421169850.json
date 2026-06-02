@@ -31,6 +31,15 @@
   ],
   "finds": [
     {
+      "id": "17804230755488196",
+      "player": "Qian",
+      "species": "Parrotfish (Uhu)",
+      "pts": 1,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780423075548
+    },
+    {
       "id": "17804213206887419",
       "player": "Mark",
       "species": "Whale Shark",
@@ -43,6 +52,5 @@
   "customSp": [],
   "ptOverrides": {},
   "hiddenSp": [],
-  "endTime": 1783790760000,
-  "lastUpdated": 1780423076734
+  "lastUpdated": 1780423096021
 }
