@@ -29,10 +29,20 @@
     "reptiles",
     "insects"
   ],
-  "finds": [],
+  "finds": [
+    {
+      "id": "17804248645727300",
+      "player": "Lea",
+      "species": "Parrotfish (Uhu)",
+      "pts": 1,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780424864572
+    }
+  ],
   "customSp": [],
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": null,
-  "lastUpdated": 1780424851406
+  "lastUpdated": 1780424865057
 }
