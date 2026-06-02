@@ -29,9 +29,20 @@
     "reptiles",
     "insects"
   ],
-  "finds": [],
+  "finds": [
+    {
+      "id": "17804213206887419",
+      "player": "Mark",
+      "species": "Whale Shark",
+      "pts": 100,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780421320688
+    }
+  ],
   "customSp": [],
   "ptOverrides": {},
   "hiddenSp": [],
-  "lastUpdated": 1780421353591
+  "endTime": 1783790760000,
+  "lastUpdated": 1780421567081
 }
