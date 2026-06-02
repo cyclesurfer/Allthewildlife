@@ -31,6 +31,15 @@
   ],
   "finds": [
     {
+      "id": "17804244514415734",
+      "player": "Leo",
+      "species": "Whale Shark",
+      "pts": 100,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780424451441
+    },
+    {
       "id": "17804243799743677",
       "player": "Ron",
       "species": "Humpback Whale",
@@ -44,5 +53,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1780769940000,
-  "lastUpdated": 1780424419810
+  "lastUpdated": 1780424500718
 }
