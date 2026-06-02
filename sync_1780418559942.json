@@ -1,0 +1,38 @@
+{
+  "gameId": 1780418559942,
+  "gameName": "Test 4 PC",
+  "teams": [
+    {
+      "name": "Team 1",
+      "color": "#e85d3a"
+    },
+    {
+      "name": "Team 2",
+      "color": "#1a6b8a"
+    }
+  ],
+  "players": [
+    {
+      "name": "Mark",
+      "ti": 0
+    },
+    {
+      "name": "Qian",
+      "ti": 1
+    }
+  ],
+  "approver": "Mark",
+  "activeCats": [
+    "sea",
+    "fish",
+    "birds",
+    "reptiles",
+    "insects"
+  ],
+  "finds": [],
+  "customSp": [],
+  "ptOverrides": {},
+  "hiddenSp": [],
+  "endTime": 1781800920000,
+  "lastUpdated": 1780420085022
+}
