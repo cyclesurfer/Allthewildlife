@@ -1,0 +1,38 @@
+{
+  "gameId": 1780424306529,
+  "gameName": "PC Test 1A",
+  "teams": [
+    {
+      "name": "Team 1",
+      "color": "#e85d3a"
+    },
+    {
+      "name": "Team 2",
+      "color": "#1a6b8a"
+    }
+  ],
+  "players": [
+    {
+      "name": "mark",
+      "ti": 0
+    },
+    {
+      "name": "qian",
+      "ti": 1
+    }
+  ],
+  "approver": "mark",
+  "activeCats": [
+    "sea",
+    "fish",
+    "birds",
+    "reptiles",
+    "insects"
+  ],
+  "finds": [],
+  "customSp": [],
+  "ptOverrides": {},
+  "hiddenSp": [],
+  "endTime": 1782497880000,
+  "lastUpdated": 1780424306746
+}
