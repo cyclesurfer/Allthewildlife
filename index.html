@@ -1001,7 +1001,7 @@ async function runBatch(){
     le.innerHTML+='<div class="bi" id="br-'+i+'"><div>&#128260;</div><div style="flex:1">Photo '+(i+1)+': identifying...</div></div>';
     try{
       var b64=p.data.split(',')[1],mime=p.data.split(';')[0].split(':')[1]||'image/jpeg';
-      var resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':getApiKey(),'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:200,messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mime,data:b64}},{type:'text',text:'Identify this Maui wildlife photo. Return ONLY JSON: {"species":"exact name from list or null","confidence":"high/medium/low","note":"brief 5-word max"}\nSpecies list: '+names.join(', ')}]}]})});
+      var resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':getApiKey(),'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:200,messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mime,data:b64}},{type:'text',text:'Identify this Maui wildlife photo. Return ONLY JSON: {"species":"exact name from list or null","confidence":"high/medium/low","note":"brief 5-word max"}\nSpecies list: '+names.join(', ')}]}]})});
       var d=await resp.json();var txt=(d.content||[]).filter(function(c){return c.type==='text';}).map(function(c){return c.text;}).join('')||'{}';
       var res={species:null,confidence:'low',note:''};try{res=JSON.parse(txt.replace(/```json|```/g,'').trim());}catch(e){}
       var sp=allSp.find(function(s){return s.n===res.species;});
@@ -1069,7 +1069,7 @@ function autoIdentify(photoData){
   var b64=photoData.split(',')[1];
   var mime=photoData.split(';')[0].split(':')[1]||'image/jpeg';
 
-  fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:200,messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mime,data:b64}},{type:'text',text:'Identify this Maui wildlife photo. Return ONLY JSON: {"species":"exact name from list or null","confidence":"high/medium/low","note":"brief 5-word max"}\nSpecies list: '+names.join(', ')}]}]})})
+  fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:200,messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mime,data:b64}},{type:'text',text:'Identify this Maui wildlife photo. Return ONLY JSON: {"species":"exact name from list or null","confidence":"high/medium/low","note":"brief 5-word max"}\nSpecies list: '+names.join(', ')}]}]})})
   .then(function(r){return r.json();})
   .then(function(d){
     var txt=(d.content||[]).filter(function(c2){return c2.type==='text';}).map(function(c2){return c2.text;}).join('')||'{}';
