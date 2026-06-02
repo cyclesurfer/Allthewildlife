@@ -38,11 +38,20 @@
       "status": "pending",
       "emoji": "📷",
       "time": 1780424864572
+    },
+    {
+      "id": "17804249823261733",
+      "player": "Ron",
+      "species": "Great White Shark",
+      "pts": 100,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780424982326
     }
   ],
   "customSp": [],
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": null,
-  "lastUpdated": 1780424865057
+  "lastUpdated": 1780424982746
 }
