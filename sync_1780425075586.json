@@ -1,0 +1,38 @@
+{
+  "gameId": 1780425075586,
+  "gameName": "PC Test 3A",
+  "teams": [
+    {
+      "name": "Team 1",
+      "color": "#e85d3a"
+    },
+    {
+      "name": "Team 2",
+      "color": "#1a6b8a"
+    }
+  ],
+  "players": [
+    {
+      "name": "Qian",
+      "ti": 0
+    },
+    {
+      "name": "Mark",
+      "ti": 1
+    }
+  ],
+  "approver": "Qian",
+  "activeCats": [
+    "sea",
+    "fish",
+    "birds",
+    "reptiles",
+    "insects"
+  ],
+  "finds": [],
+  "customSp": [],
+  "ptOverrides": {},
+  "hiddenSp": [],
+  "endTime": null,
+  "lastUpdated": 1780425075947
+}
