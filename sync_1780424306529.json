@@ -29,10 +29,20 @@
     "reptiles",
     "insects"
   ],
-  "finds": [],
+  "finds": [
+    {
+      "id": "17804243197447195",
+      "player": "mark",
+      "species": "Blacktip Reef Shark",
+      "pts": 25,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780424319744
+    }
+  ],
   "customSp": [],
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1782497880000,
-  "lastUpdated": 1780424367308
+  "lastUpdated": 1780424413743
 }
