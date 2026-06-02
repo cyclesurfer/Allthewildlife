@@ -1174,86 +1174,118 @@ function homeSync(){
   var headers={'Accept':'application/vnd.github.v3+json'};
   if(token)headers['Authorization']='token '+token;
   showToast('Syncing...');
+  var syncBtn=document.getElementById('sync-btn');
+  if(syncBtn)syncBtn.innerHTML='<span class="sync-dot wait"></span>Syncing...';
 
   fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/',{headers:headers})
   .then(function(r){return r.json();})
   .then(function(files){
-    if(!Array.isArray(files)){showToast('Sync failed');return;}
+    if(!Array.isArray(files)){throw new Error('Bad response from GitHub');}
     var syncFiles=files.filter(function(f){return f.name.indexOf('sync_')===0&&f.name.indexOf('.json')>0;});
-    if(!syncFiles.length&&!games.length){showToast('No games found');return;}
 
+    // Fetch each sync file to get content + SHA
     var promises=syncFiles.map(function(sf){
       return fetch(sf.url,{headers:headers}).then(function(r){return r.json();});
     });
 
-    Promise.all(promises).then(function(results){
-      var imported=0;
-      results.forEach(function(data){
-        if(!data.content)return;
-        var remote=null;
-        try{remote=JSON.parse(atob(data.content.replace(/\n/g,'')));}catch(e){return;}
-        if(!remote||!remote.gameId)return;
+    return Promise.all(promises);
+  })
+  .then(function(results){
+    var imported=0;
+    var shaMap={};
 
-        var local=games.find(function(g){return g.id===remote.gameId;});
-        if(local){
-          // Merge remote finds into local
-          var byId={};
-          var statusRank={unknown:0,pending:1,approved:2,rejected:3};
-          (local.finds||[]).forEach(function(f){byId[f.id]=f;});
-          (remote.finds||[]).forEach(function(f){
-            if(!byId[f.id]){byId[f.id]=f;}
-            else{
-              var lf=byId[f.id];
-              if((statusRank[f.status]||0)>(statusRank[lf.status]||0))byId[f.id]=f;
-              if(lf.photoData&&!byId[f.id].photoData)byId[f.id].photoData=lf.photoData;
+    results.forEach(function(data){
+      if(!data.content)return;
+      var remote=null;
+      try{remote=JSON.parse(atob(data.content.replace(/\n/g,'')));}catch(e){return;}
+      if(!remote||!remote.gameId)return;
+
+      // Track SHA for this file
+      shaMap['sync_'+remote.gameId+'.json']=data.sha;
+
+      var local=games.find(function(g){return g.id===remote.gameId;});
+      if(local){
+        // Merge remote finds into local
+        var byId={};
+        var statusRank={unknown:0,pending:1,approved:2,rejected:3};
+        (local.finds||[]).forEach(function(f){byId[f.id]=f;});
+        (remote.finds||[]).forEach(function(f){
+          if(!byId[f.id]){byId[f.id]=f;}
+          else{
+            var lf=byId[f.id];
+            if((statusRank[f.status]||0)>(statusRank[lf.status]||0)){
+              var hadPhoto=lf.photoData;
+              byId[f.id]=f;
+              if(hadPhoto&&!f.photoData)byId[f.id].photoData=hadPhoto;
             }
-          });
-          local.finds=[];for(var id in byId)local.finds.push(byId[id]);
-          local.finds.sort(function(a,b){return b.time-a.time;});
-          if(remote.customSp)(remote.customSp).forEach(function(rs){if(!local.customSp.some(function(ls){return ls.n===rs.n;}))local.customSp.push(rs);});
-          if(remote.ptOverrides){for(var k in remote.ptOverrides){if(!local.ptOverrides[k])local.ptOverrides[k]=remote.ptOverrides[k];}}
-        } else {
-          // Import new game
-          var g={
-            id:remote.gameId,name:remote.gameName||'Imported Game',
-            teams:remote.teams||[],players:remote.players||[],
-            approver:remote.approver||'',activeCats:remote.activeCats||['sea','fish','birds','reptiles','insects'],
-            finds:(remote.finds||[]).map(function(f){f.photoData=null;return f;}),
-            customSp:remote.customSp||[],ptOverrides:remote.ptOverrides||{},
-            hiddenSp:remote.hiddenSp||[],endTime:remote.endTime||null,
-            created:remote.gameId
-          };
-          games.push(g);
-          imported++;
-        }
-      });
-
-      // Now push all local games back
-      if(token){
-        games.forEach(function(lg){
-          var fname='sync_'+lg.id+'.json';
-          var url='https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+fname;
-          var existing=syncFiles.find(function(sf){return sf.name===fname;});
-          var pushData={
-            gameId:lg.id,gameName:lg.name,teams:lg.teams,players:lg.players,
-            approver:lg.approver,activeCats:lg.activeCats,
-            finds:lg.finds.map(function(f){var c2={};for(var k in f)if(k!=='photoData')c2[k]=f[k];return c2;}),
-            customSp:lg.customSp||[],ptOverrides:lg.ptOverrides||{},hiddenSp:lg.hiddenSp||[],
-            endTime:lg.endTime||null,lastUpdated:Date.now()
-          };
-          var b64=btoa(unescape(encodeURIComponent(JSON.stringify(pushData,null,2))));
-          var body={message:'sync '+new Date().toISOString(),content:b64};
-          if(existing)body.sha=existing.sha;
-          fetch(url,{method:'PUT',headers:{'Accept':'application/vnd.github.v3+json','Authorization':'token '+token,'Content-Type':'application/json'},body:JSON.stringify(body)}).catch(function(){});
+          }
         });
+        local.finds=[];for(var id in byId)local.finds.push(byId[id]);
+        local.finds.sort(function(a,b){return b.time-a.time;});
+        // Merge custom species
+        if(remote.customSp)(remote.customSp).forEach(function(rs){if(!(local.customSp||[]).some(function(ls){return ls.n===rs.n;})){if(!local.customSp)local.customSp=[];local.customSp.push(rs);}});
+        if(remote.ptOverrides){if(!local.ptOverrides)local.ptOverrides={};for(var k in remote.ptOverrides){if(!local.ptOverrides[k])local.ptOverrides[k]=remote.ptOverrides[k];}}
+        // Sync players/teams from remote if local is empty
+        if(remote.players&&(!local.players||!local.players.length))local.players=remote.players;
+        if(remote.teams&&(!local.teams||!local.teams.length))local.teams=remote.teams;
+      } else {
+        // Import new game
+        var g={
+          id:remote.gameId,name:remote.gameName||'Imported Game',
+          teams:remote.teams||[],players:remote.players||[],
+          approver:remote.approver||'',activeCats:remote.activeCats||['sea','fish','birds','reptiles','insects'],
+          finds:(remote.finds||[]).map(function(f){var c2={};for(var k in f)c2[k]=f[k];c2.photoData=null;return c2;}),
+          customSp:remote.customSp||[],ptOverrides:remote.ptOverrides||{},
+          hiddenSp:remote.hiddenSp||[],endTime:remote.endTime||null,
+          created:remote.gameId
+        };
+        games.push(g);
+        imported++;
       }
+    });
 
-      save();renderGames();
-      showToast(imported>0?'Joined '+imported+' game'+(imported>1?'s':'')+'! All synced ✓':'All synced ✓');
+    save();renderGames();
+    // Refresh game screen if a game is open
+    if(G){renderLB();renderMF();renderApQ();renderSpList();}
+
+    // Now push all local games back if we have a token
+    if(!token){
+      if(syncBtn)syncBtn.innerHTML='<span class="sync-dot ok"></span>Synced';
+      setTimeout(function(){if(syncBtn)syncBtn.innerHTML='🔄 Sync';},2500);
+      showToast(imported>0?'Joined '+imported+' game(s)! Pulled ✓':'Pulled ✓ (no token to push)');
+      return;
+    }
+
+    var pushPromises=games.map(function(lg){
+      var fname='sync_'+lg.id+'.json';
+      var url='https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+fname;
+      var pushData={
+        gameId:lg.id,gameName:lg.name,teams:lg.teams,players:lg.players,
+        approver:lg.approver,activeCats:lg.activeCats,
+        finds:lg.finds.map(function(f){var c2={};for(var k in f)if(k!=='photoData')c2[k]=f[k];return c2;}),
+        customSp:lg.customSp||[],ptOverrides:lg.ptOverrides||{},hiddenSp:lg.hiddenSp||[],
+        endTime:lg.endTime||null,lastUpdated:Date.now()
+      };
+      var b64=btoa(unescape(encodeURIComponent(JSON.stringify(pushData,null,2))));
+      var body={message:'sync '+new Date().toISOString(),content:b64};
+      if(shaMap[fname])body.sha=shaMap[fname];
+      return fetch(url,{method:'PUT',headers:{'Accept':'application/vnd.github.v3+json','Authorization':'token '+token,'Content-Type':'application/json'},body:JSON.stringify(body)})
+      .then(function(r){
+        if(!r.ok)return r.json().then(function(d){console.error('Push failed for '+fname+':',d);});
+        console.log('Pushed '+fname+' OK');
+      });
+    });
+
+    return Promise.all(pushPromises).then(function(){
+      if(syncBtn)syncBtn.innerHTML='<span class="sync-dot ok"></span>Synced';
+      setTimeout(function(){if(syncBtn)syncBtn.innerHTML='🔄 Sync';},2500);
+      showToast(imported>0?'Joined '+imported+' game(s)! Synced ✓':'Synced ✓');
     });
   })
   .catch(function(err){
-    showToast('Sync failed — check connection');
+    if(syncBtn)syncBtn.innerHTML='<span class="sync-dot err"></span>Error';
+    setTimeout(function(){if(syncBtn)syncBtn.innerHTML='🔄 Sync';},3000);
+    showToast('Sync failed — check token/connection');
     console.error('homeSync error:',err);
   });
 }
@@ -1406,7 +1438,7 @@ function mergeGame(remote){
 }
 
 function autoSync(){
-  if(G&&getGHToken())doSync();
+  if(getGHToken())homeSync();
 }
 
 function syncAll(){
