@@ -1,0 +1,56 @@
+{
+  "gameId": 1780375161602,
+  "gameName": "Test",
+  "teams": [
+    {
+      "name": "Team 1",
+      "color": "#e85d3a"
+    },
+    {
+      "name": "Team 2",
+      "color": "#1a6b8a"
+    }
+  ],
+  "players": [
+    {
+      "name": "Mark",
+      "ti": 0
+    },
+    {
+      "name": "Leo",
+      "ti": 1
+    }
+  ],
+  "approver": "Mark",
+  "activeCats": [
+    "sea",
+    "fish",
+    "birds",
+    "reptiles",
+    "insects"
+  ],
+  "finds": [
+    {
+      "id": "17804099432734377",
+      "player": "Mark",
+      "species": "Humpback Whale",
+      "pts": 25,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780409943273
+    },
+    {
+      "id": "17803781310202041",
+      "player": "Mark",
+      "species": "Humpback Whale",
+      "pts": 25,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780378131020
+    }
+  ],
+  "customSp": [],
+  "ptOverrides": {},
+  "hiddenSp": [],
+  "lastUpdated": 1780418836910
+}
