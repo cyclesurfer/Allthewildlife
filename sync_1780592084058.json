@@ -1,0 +1,38 @@
+{
+  "gameId": 1780592084058,
+  "gameName": "Maui Game",
+  "teams": [
+    {
+      "name": "Team 1",
+      "color": "#e85d3a"
+    },
+    {
+      "name": "Team 2",
+      "color": "#1a6b8a"
+    }
+  ],
+  "players": [
+    {
+      "name": "Mark",
+      "ti": 0
+    },
+    {
+      "name": "Sahar",
+      "ti": 1
+    }
+  ],
+  "approver": "Mark",
+  "activeCats": [
+    "sea",
+    "fish",
+    "birds",
+    "reptiles",
+    "insects"
+  ],
+  "finds": [],
+  "customSp": [],
+  "ptOverrides": {},
+  "hiddenSp": [],
+  "endTime": null,
+  "lastUpdated": 1780592084099
+}
