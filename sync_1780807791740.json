@@ -1,0 +1,50 @@
+{
+  "gameId": 1780807791740,
+  "gameName": "Maui Trip",
+  "teams": [
+    {
+      "name": "Team Maui",
+      "color": "#e85d3a"
+    },
+    {
+      "name": "Team Manta",
+      "color": "#1a6b8a"
+    }
+  ],
+  "players": [
+    {
+      "name": "Leo",
+      "ti": 0
+    },
+    {
+      "name": "Mark",
+      "ti": 1
+    },
+    {
+      "name": "Ron",
+      "ti": 0
+    },
+    {
+      "name": "Lea",
+      "ti": 0
+    },
+    {
+      "name": "Qian",
+      "ti": 1
+    }
+  ],
+  "approver": "Mark",
+  "activeCats": [
+    "sea",
+    "fish",
+    "birds",
+    "reptiles",
+    "insects"
+  ],
+  "finds": [],
+  "customSp": [],
+  "ptOverrides": {},
+  "hiddenSp": [],
+  "endTime": 1781406000000,
+  "lastUpdated": 1780807792625
+}
