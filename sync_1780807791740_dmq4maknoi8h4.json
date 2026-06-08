@@ -1,0 +1,357 @@
+{
+  "gameId": 1780807791740,
+  "gameName": "Maui Trip",
+  "teams": [
+    {
+      "name": "Team Maui",
+      "color": "#e85d3a"
+    },
+    {
+      "name": "Team Manta",
+      "color": "#1a6b8a"
+    }
+  ],
+  "players": [
+    {
+      "name": "Leo",
+      "ti": 0
+    },
+    {
+      "name": "Mark",
+      "ti": 1
+    },
+    {
+      "name": "Ron",
+      "ti": 0
+    },
+    {
+      "name": "Lea",
+      "ti": 0
+    },
+    {
+      "name": "Qian",
+      "ti": 1
+    }
+  ],
+  "approver": "Mark",
+  "activeCats": [
+    "sea",
+    "fish",
+    "birds",
+    "reptiles",
+    "insects"
+  ],
+  "deviceId": "dmq4maknoi8h4",
+  "finds": [
+    {
+      "id": "17808824056507436",
+      "player": "Mark",
+      "species": "Globe Skimmer",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780882405650
+    },
+    {
+      "id": "17808820891447434",
+      "player": "Mark",
+      "species": "Monarch Butterfly",
+      "pts": 5,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780882089144
+    },
+    {
+      "id": "17808819919503661",
+      "player": "Mark",
+      "species": "Brown Anole",
+      "pts": 1,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780881991950
+    },
+    {
+      "id": "17808819686605839",
+      "player": "Mark",
+      "species": "Monarch Butterfly",
+      "pts": 5,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780881968660
+    },
+    {
+      "id": "17808819072485813",
+      "player": "Leo",
+      "species": "Monarch Butterfly",
+      "pts": 5,
+      "status": "rejected",
+      "emoji": "📷",
+      "time": 1780881907248
+    },
+    {
+      "id": "17808817505994966",
+      "player": "Leo",
+      "species": "Brown Anole",
+      "pts": 1,
+      "status": "rejected",
+      "emoji": "📷",
+      "time": 1780881750599
+    },
+    {
+      "id": "17808816670878061",
+      "player": "Mark",
+      "species": "Sally Lightfoot Crab",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780881667087
+    },
+    {
+      "id": "17808816285928373",
+      "player": "Mark",
+      "species": "Sally Lightfoot Crab",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780881628592
+    },
+    {
+      "id": "17808816143954218",
+      "player": "Mark",
+      "species": "Sally Lightfoot Crab",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780881614395
+    },
+    {
+      "id": "17808815749425838",
+      "player": "Mark",
+      "species": "Red Crested Cardinal",
+      "pts": 1,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780881574942
+    },
+    {
+      "id": "17808549289114791",
+      "player": "Leo",
+      "species": null,
+      "pts": 0,
+      "status": "rejected",
+      "emoji": "📷",
+      "time": 1780854928911
+    },
+    {
+      "id": "1780849793407340",
+      "player": "Mark",
+      "species": "Sally Lightfoot Crab",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780849793407
+    },
+    {
+      "id": "17808497418359287",
+      "player": "Leo",
+      "species": "Sally Lightfoot Crab",
+      "pts": 2,
+      "status": "rejected",
+      "emoji": "📷",
+      "time": 1780849741835
+    },
+    {
+      "id": "17808496636656937",
+      "player": "Leo",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780849663665
+    },
+    {
+      "id": "17808496441893944",
+      "player": "Leo",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780849644189
+    },
+    {
+      "id": "1780849541315128",
+      "player": "Leo",
+      "species": "Green Sea Turtle (basking)",
+      "pts": 5,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780849541315
+    },
+    {
+      "id": "1780849501312242",
+      "player": "Leo",
+      "species": "Green Sea Turtle (basking)",
+      "pts": 5,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780849501312
+    },
+    {
+      "id": "17808493930185465",
+      "player": "Leo",
+      "species": "Sally Lightfoot Crab",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780849393018
+    },
+    {
+      "id": "17808493646741794",
+      "player": "Leo",
+      "species": "Sally Lightfoot Crab",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780849364674
+    },
+    {
+      "id": "17808493412937655",
+      "player": "Leo",
+      "species": "Sally Lightfoot Crab",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780849341293
+    },
+    {
+      "id": "17808489142349800",
+      "player": "Leo",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780848914234
+    },
+    {
+      "id": "17808488917602928",
+      "player": "Leo",
+      "species": "Sally Lightfoot Crab",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780848891762
+    },
+    {
+      "id": "1780847181710119",
+      "player": "Leo",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780847181710
+    },
+    {
+      "id": "17808091354738233",
+      "player": "Mark",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780809135473
+    },
+    {
+      "id": "17808088591705121",
+      "player": "Mark",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780808859170
+    },
+    {
+      "id": "17808088393538614",
+      "player": "Mark",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780808839353
+    },
+    {
+      "id": "17808088193844403",
+      "player": "Mark",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780808819384
+    },
+    {
+      "id": "17808087769917689",
+      "player": "Mark",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780808776991
+    },
+    {
+      "id": "17808087316801288",
+      "player": "Leo",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "rejected",
+      "emoji": "📷",
+      "time": 1780808731680
+    },
+    {
+      "id": "17808085753677208",
+      "player": "Mark",
+      "species": "Green Sea Turtle (basking)",
+      "pts": 5,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780808575367
+    },
+    {
+      "id": "1780808490110834",
+      "player": "Mark",
+      "species": "Green Sea Turtle (basking)",
+      "pts": 5,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780808490110
+    },
+    {
+      "id": "17808080804085037",
+      "player": "Leo",
+      "species": "Green Sea Turtle (basking)",
+      "pts": 5,
+      "status": "rejected",
+      "emoji": "📷",
+      "time": 1780808080408
+    },
+    {
+      "id": "17808080340587989",
+      "player": "Mark",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "rejected",
+      "emoji": "📷",
+      "time": 1780808034059
+    }
+  ],
+  "customSp": [
+    {
+      "n": "Red Crested Cardinal",
+      "s": "",
+      "p": 1,
+      "tab": "birds",
+      "cat": "Custom"
+    }
+  ],
+  "ptOverrides": {},
+  "hiddenSp": [],
+  "endTime": 1781406000000,
+  "lastUpdated": 1780894932653
+}
