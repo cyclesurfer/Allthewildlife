@@ -345,7 +345,7 @@
       "player": "Leo",
       "species": "Green Sea Turtle",
       "pts": 2,
-      "status": "pending",
+      "status": "approved",
       "emoji": "📷",
       "time": 1780895173843
     },
@@ -354,7 +354,7 @@
       "player": "Leo",
       "species": "Brown Anole",
       "pts": 1,
-      "status": "pending",
+      "status": "approved",
       "emoji": "📷",
       "time": 1780895189189
     },
@@ -380,5 +380,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780895225584
+  "lastUpdated": 1780895226734
 }
