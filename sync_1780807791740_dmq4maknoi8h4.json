@@ -348,6 +348,15 @@
       "status": "pending",
       "emoji": "📷",
       "time": 1780895173843
+    },
+    {
+      "id": "17808951891895129",
+      "player": "Leo",
+      "species": "Brown Anole",
+      "pts": 1,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780895189189
     }
   ],
   "customSp": [
@@ -362,5 +371,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780895174433
+  "lastUpdated": 1780895189498
 }
