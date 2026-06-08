@@ -44,6 +44,33 @@
   "deviceId": "dmq4maknoi8h4",
   "finds": [
     {
+      "id": "17808952131179568",
+      "player": "Leo",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780895213117
+    },
+    {
+      "id": "17808951891895129",
+      "player": "Leo",
+      "species": "Brown Anole",
+      "pts": 1,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780895189189
+    },
+    {
+      "id": "17808951738429860",
+      "player": "Leo",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "approved",
+      "emoji": "📷",
+      "time": 1780895173843
+    },
+    {
       "id": "17808824056507436",
       "player": "Mark",
       "species": "Globe Skimmer",
@@ -339,33 +366,6 @@
       "status": "rejected",
       "emoji": "📷",
       "time": 1780808034059
-    },
-    {
-      "id": "17808951738429860",
-      "player": "Leo",
-      "species": "Green Sea Turtle",
-      "pts": 2,
-      "status": "approved",
-      "emoji": "📷",
-      "time": 1780895173843
-    },
-    {
-      "id": "17808951891895129",
-      "player": "Leo",
-      "species": "Brown Anole",
-      "pts": 1,
-      "status": "approved",
-      "emoji": "📷",
-      "time": 1780895189189
-    },
-    {
-      "id": "17808952131179568",
-      "player": "Leo",
-      "species": "Green Sea Turtle",
-      "pts": 2,
-      "status": "approved",
-      "emoji": "📷",
-      "time": 1780895213117
     }
   ],
   "customSp": [
@@ -380,5 +380,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780895226734
+  "lastUpdated": 1780895232201
 }
