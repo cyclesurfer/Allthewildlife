@@ -447,6 +447,15 @@
       "status": "pending",
       "emoji": "📷",
       "time": 1780973752092
+    },
+    {
+      "id": "17809737793129582",
+      "player": "Mark",
+      "species": "Manybar Goatfish",
+      "pts": 1,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780973779312
     }
   ],
   "customSp": [
@@ -461,5 +470,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780973752993
+  "lastUpdated": 1780973779771
 }
