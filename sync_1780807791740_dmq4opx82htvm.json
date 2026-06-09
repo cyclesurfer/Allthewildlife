@@ -393,6 +393,15 @@
       "status": "pending",
       "emoji": "📷",
       "time": 1780973603020
+    },
+    {
+      "id": "17809736182342336",
+      "player": "Leo",
+      "species": "Achilles Tang",
+      "pts": 2,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780973618234
     }
   ],
   "customSp": [
@@ -407,5 +416,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780973603440
+  "lastUpdated": 1780973618594
 }
