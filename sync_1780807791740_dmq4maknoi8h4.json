@@ -510,6 +510,15 @@
       "status": "rejected",
       "emoji": "📷",
       "time": 1780808034059
+    },
+    {
+      "id": "17809751084833497",
+      "player": "Leo",
+      "species": "Green Sea Turtle",
+      "pts": 2,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780975108484
     }
   ],
   "customSp": [
@@ -524,5 +533,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780975093876
+  "lastUpdated": 1780975108872
 }
