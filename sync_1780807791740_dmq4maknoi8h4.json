@@ -57,7 +57,7 @@
       "player": "Mark",
       "species": "Spinner Dolphin",
       "pts": 10,
-      "status": "pending",
+      "status": "approved",
       "emoji": "📷",
       "time": 1780974872549
     },
@@ -524,5 +524,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780974916818
+  "lastUpdated": 1780974919333
 }
