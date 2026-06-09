@@ -48,7 +48,7 @@
       "player": "Leo",
       "species": "Spinner Dolphin",
       "pts": 10,
-      "status": "pending",
+      "status": "approved",
       "emoji": "📷",
       "time": 1780974883107
     },
@@ -524,5 +524,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780974912423
+  "lastUpdated": 1780974916818
 }
