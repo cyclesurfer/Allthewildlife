@@ -420,6 +420,15 @@
       "status": "pending",
       "emoji": "📷",
       "time": 1780973657955
+    },
+    {
+      "id": "17809736816782018",
+      "player": "Mark",
+      "species": "Threadfin Butterflyfish",
+      "pts": 1,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780973681678
     }
   ],
   "customSp": [
@@ -434,5 +443,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780973658325
+  "lastUpdated": 1780973682092
 }
