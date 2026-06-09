@@ -145,9 +145,9 @@
     {
       "id": "17809735631178195",
       "player": "Leo",
-      "species": null,
-      "pts": 0,
-      "status": "unknown",
+      "species": "Cornetfish",
+      "pts": 2,
+      "status": "approved",
       "emoji": "📷",
       "time": 1780973563117
     },
@@ -488,5 +488,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780973932422
+  "lastUpdated": 1780973958136
 }
