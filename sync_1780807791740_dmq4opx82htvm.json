@@ -402,6 +402,15 @@
       "status": "pending",
       "emoji": "📷",
       "time": 1780973618234
+    },
+    {
+      "id": "17809736395738836",
+      "player": "Leo",
+      "species": "Whitebar Surgeonfish",
+      "pts": 1,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780973639573
     }
   ],
   "customSp": [
@@ -416,5 +425,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780973618594
+  "lastUpdated": 1780973639995
 }
