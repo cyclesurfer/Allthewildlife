@@ -456,6 +456,15 @@
       "status": "pending",
       "emoji": "📷",
       "time": 1780973779312
+    },
+    {
+      "id": "1780973816626248",
+      "player": "Mark",
+      "species": "Cornetfish",
+      "pts": 2,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780973816626
     }
   ],
   "customSp": [
@@ -470,5 +479,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780973779771
+  "lastUpdated": 1780973817459
 }
