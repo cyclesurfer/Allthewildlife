@@ -411,6 +411,15 @@
       "status": "pending",
       "emoji": "📷",
       "time": 1780973639573
+    },
+    {
+      "id": "17809736579556230",
+      "player": "Mark",
+      "species": "Whitebar Surgeonfish",
+      "pts": 1,
+      "status": "pending",
+      "emoji": "📷",
+      "time": 1780973657955
     }
   ],
   "customSp": [
@@ -425,5 +434,5 @@
   "ptOverrides": {},
   "hiddenSp": [],
   "endTime": 1781406000000,
-  "lastUpdated": 1780973639995
+  "lastUpdated": 1780973658325
 }
